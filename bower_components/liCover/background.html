@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>liTarget</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.toolbar span').on('click',function(){
+		$(this).addClass('cur').siblings().removeClass('cur');
+		$('.demoSize').css({width:$(this).data('val')});
+	});
+});
+</script>
+<style>
+.toolbar { padding:20px 0; text-align:center}
+.toolbar span { border-bottom:1px dashed #ccc; cursor:pointer; margin:0 20px; color:#000}
+.toolbar span.cur { color:#f00; border-bottom:1px dashed #f00}
+.demoSize {
+	width: 100%;
+	position: relative;
+	height: 500px;
+	margin: auto;
+	
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+</style>
+</head>
+<body>
+
+<div class="conteiner">
+<h3>liCover - jQuery Responsive Cover Image или адаптивные изображения на jQuery</h3>
+<div class="navPr">
+	<a href="index.html">Описание</a>
+    <span>Фон на весь экран</span>
+</div>
+
+<fieldset>
+    <legend>Результат</legend>	
+	<div class="toolbar">
+		<span data-val="100%" class="cur">width:100%</span>
+		<span data-val="800px">width:800px</span>
+		<span data-val="640px">width:640px</span>
+		<span data-val="320px">width:320px</span>
+	</div>	
+   	<div class="demoSize">
+    	<iframe src="files/fullscreendemo.html" style="width:100%; height:100%; position:absolute; top:0; left:0; border:0;">sad</iframe>
+		<div style="font:80px/200px Arial, Helvetica, sans-serif; color:#fff; text-align:center; position:absolute; top:48%; left:50%; width:300px; margin:-100px 0 0 -150px;">
+			liCover
+		</div>
+	</div>
+</fieldset> 
+
+<fieldset>
+    <legend>Подключаемые файлы</legend>		
+    <pre><xmp>
+&lt;link rel="stylesheet" href="css/liCover.css"&gt;
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.liCover.js"&gt;&lt;/script&gt;
+    </xmp></pre>
+</fieldset> 
+
+<fieldset>
+    <legend>Инициализация плагина</legend>		
+    <pre><xmp>
+&lt;script&gt;
+$(function(){
+	$(window).load(function(){
+		$('.cover').liCover({
+			parent: $(window),
+			position:'fixed' //'absolute' or 'fixed'	
+		})
+	})
+})
+&lt;/script&gt;
+    </xmp></pre>
+</fieldset>
+
+<fieldset>
+    <legend>Код HTML</legend>		
+    <pre><xmp>
+&lt;body&gt;
+	<img class="cover" src="pic/img1.jpg">
+&lt;/body&gt;
+    </xmp></pre>
+</fieldset>
+
+</div>   
+
+<div class="autor">
+    <a class="logoMasscode" target="_blank" href="http://masscode.ru">
+    	<span class="logoMass">MASS</span>CODE<span class="logoMass">.RU</span>
+    </a>
+</div>
+
+</body>
+</html>

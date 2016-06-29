@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>liCover</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/liCover.css">
+</head>
+<body>
+
+<div class="conteiner">
+<h3>liCover - jQuery liCover Image или адаптивные изображения на jQuery</h3>
+<div class="navPr">
+	<span>Описание</span>
+</div>
+
+<fieldset>
+    <legend>Описание</legend>		
+
+liCover - jQuery Responsive Cover Image или адаптивные изображения на jQuery<br><br>
+Плагин liCover подгоняет изображение под размеры родительского элемента, не искажая его пропорций. 
+При этом изображение всегда будет занимать всю площадь родительского элемента.<br><br>
+liCover максимально упрощает выполнение таких задач как:<br>
+- фон на весь экран<br>
+- фотографии нестандартных пропорций<br>
+<br>
+Очень прост в подключении и весит всего 1kb
+
+</fieldset> 
+ 
+<fieldset>
+    <legend>Демо</legend>	
+    <p><a href="background.html">Фон на весь экран</a></p> 
+	<p><a href="gallery.html">Галерея с нестандартными пропорциями</a></p>   
+     
+</fieldset> 
+<fieldset>
+    <legend>Подключаемые файлы</legend>		
+    <pre><xmp>
+<link rel="stylesheet" href="css/liCover.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.liCover.js"></script>
+    </xmp></pre>
+</fieldset> 
+
+<fieldset>
+    <legend>Инициализация плагина</legend>		
+    <pre><xmp>
+<script>
+$(function(){
+	$(window).load(function(){
+		$('.cover').liCover({
+			parent: $(window),
+			position:'fixed',
+			veticalAlign:'middle',
+			align:'center'
+		})
+	})
+})
+</script> 
+    </xmp></pre>
+</fieldset>
+
+<fieldset>
+    <legend>Код HTML</legend>		
+    <pre><xmp>
+<img class="cover" src="pic/img1.jpg">
+    </xmp></pre>
+</fieldset>
+
+
+<fieldset>
+    <legend>Параметры</legend>	
+    
+    
+    <table class="optionsTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th width="1%">Option</th>
+    <th width="1%">Default&nbsp;value</th>
+    <th>Datatype</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>parent</td>
+    <td>$(window)</td>
+    <td>object jquery</td>
+    <td>Определяет родительский элемент, под размеры которого нужно подстраиваться.</td>
+  </tr>
+  <tr>
+    <td>position</td>
+    <td>'absolute'</td>
+    <td>string</td>
+    <td>Задает позиционирование изображения. <br>Может принимать значения: <span class="value">'absolute'</span>, <span class="value">'fixed'</span></td>
+  </tr>
+  <tr>
+    <td>veticalAlign</td>
+    <td>'middle'</td>
+    <td>string</td>
+    <td>Задает выравнивание изображения по вертикали. <br>Может принимать значения: <span class="value">'top'</span>, <span class="value">'bottom'</span> или <span class="value">'middle'</span></td>
+  </tr>
+  <tr>
+    <td>align</td>
+    <td>'center'</td>
+    <td>string</td>
+    <td>Задает выравнивание изображения по горизонтали. <br>Может принимать значения: <span class="value">'left'</span>, <span class="value">'right'</span> или <span class="value">'center'</span></td>
+  </tr>
+
+</table>
+</fieldset>
+
+
+<fieldset>
+    <legend>События</legend>	
+    
+<p>Перерисовка изображения висит на стандартном событии объекта $(window) "resize", также можно использовать пользовательское событие "redraw"</p>
+<span class="value">redraw</span>
+<p><b>пример кода</b></p>
+ <pre><xmp>
+<script>
+$(function(){
+	$(window).trigger('redraw')
+})
+</script> 
+    </xmp></pre>
+
+</fieldset>
+
+<fieldset>
+    <legend>LOG</legend>
+	17.04.2014 - Добавлена возможность выравнивания изображения по вертикали и горизонтали параметрами "vericalAlign" и  "align"<br>	
+	17.04.2014 - Коррекция размеров min и max<br>	
+	17.04.2014 - Исправлен баг с определением родительского блока<br>
+	27.02.2014 - Добавлен параметр "position"
+
+</fieldset>     
+	
+		
+</div> 
+<div class="autor">
+    <a class="logoMasscode" target="_blank" href="http://masscode.ru">
+    	<span class="logoMass">MASS</span>CODE<span class="logoMass">.RU</span>
+    </a>
+</div>
+</body>
+</html>

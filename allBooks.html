@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Publish Yourself</title>
+  <link rel="stylesheet" href="./bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./bower_components/owl.carousel.2.0.0-beta.2.4/assets/owl.carousel.css">
+  <link rel="stylesheet" href="./bower_components/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+  <link rel="stylesheet" href="./bower_components/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="./bower_components/jquery-ui-multiselect-widget-master/jquery.multiselect.css">
+  <link rel="stylesheet" href="./bower_components/jquery-ui-multiselect-widget-master/jquery.multiselect.filter.css">
+
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./bower_components/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script src="./bower_components/jquery-ui-multiselect-widget-master/src/jquery.multiselect.js"></script>
+
+
+
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/media.css">
+
+
+
+</head>
+
+<body>
+
+  <div id="login-modal" class="modal fade">
+    <div class="text-center" style="padding:50px 0">
+      <div class="logo white1">Вход</div>
+
+      <div class="login-form-1">
+        <form id="login-form" class="text-left">
+          <div class="login-form-main-message"></div>
+
+          <div class="main-login-form">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="login-group">
+
+              <div class="form-group">
+                <label for="lg_username" class="sr-only">Login</label>
+                <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="Псевдоним">
+              </div>
+              <div class="form-group">
+                <label for="lg_password" class="sr-only">Password</label>
+                <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="Пароль">
+              </div>
+              <div class="form-group login-group-checkbox">
+                <input type="checkbox" id="lg_remember" name="lg_remember">
+                <label for="lg_remember">Запомнить</label>
+              </div>
+            </div>
+            <button type="submit" class="login-button">
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="etc-login-form white1">
+            <p>Забыли пароль? <a href="#"><b>Восстановление</b></a></p>
+            <p>Нет аккаунта? <a href="#"><b>&nbspРегистрация</b></a></p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div id="container-header" class="container">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <ul class="top-hyper">
+          <li>
+            <div class="dropdown"> RU <i class="fa fa-caret-down" aria-hidden="true"></i>
+              <div class="dropdown-content">
+                <ul>
+                  <li><a href="#">UA</a></li>
+                  <li><a href="#">RU</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+
+
+
+          <li>
+            <a href="#">
+              <i class="fa fa-vk"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <ul class="sign-list">
+          <li>
+            <a href="#">Зарегестрироваться</a>
+          </li>
+          <li>
+            <a href="#login-modal" class="none-outline" data-toggle="modal">Войти</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-10 col-sm-3 col-md-3 col-lg-2">
+        <div id="~u~" class="logotype lessTop">
+          <a href="#">Publish<br>&nbspYourself</a>
+        </div>
+      </div>
+      <div class="col-xs-2 col-sm-9 col-md-9 col-lg-10">
+        <ul class="nav allBooksHeader">
+          <li><a href="#">Личный<br> кабинет</a></li>
+          <li><a href="#">Форум</a></li>
+          <li><a class="highLighted" href="#">Все книги</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid fullFinder">
+    <div class="row">
+      <div class="col-md-3 leftFinder">
+        <div class="finder">
+          <input class="finderField"  type="text" placeholder="Поиск по книгам">
+          <span class="finderButton">
+            <i class='fa fa-search' aria-hidden='true'></i>
+          </span>
+        </div>
+
+      <br>
+
+        <div class="finderElement">
+          <p>
+            <p class="headerFinderName">Жанр</p>
+            <select id="selectFinderGenre" multiple="multiple" name="selectNameFinderGenre" size="5" >
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+              <option value="option4">Option 4</option>
+              <option value="option5">Option 5</option>
+              <option value="option6">Option 6</option>
+              <option value="option7">Option 7</option>
+            </select>
+          </p>
+
+
+          <p>
+            <label class="priceFilterLabel" for="amount">
+              Цена: &nbsp &nbsp
+            </label>
+            <input type="text" id="amount" readonly style="border:0;">
+          </p>
+          <div id="slider-range"></div>
+
+
+          <p>
+            <p class="headerFinderName">Язык</p>
+            <select id="selectFinderLanguege" multiple="multiple" name="selectNameFinderLanguege" size="5" >
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+              <option value="option4">Option 4</option>
+              <option value="option5">Option 5</option>
+              <option value="option6">Option 6</option>
+              <option value="option7">Option 7</option>
+            </select>
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-9 rightFinder">
+        <div class="row">
+          <div class="col-md-12 sortGeneralHead">
+            <div>
+              <div class="row">
+                <div class="col-md-2 sortElement">
+                    Цена&nbsp
+                    <a href="#"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-md-2 sortElement">
+                    Рейтинг&nbsp
+                    <a href="#"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-md-3 sortElement">
+                    Дата публикации&nbsp
+                    <a href="#"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="sortGeneral">
+            <div class="col-md-12">
+              <div class="bookInFinder">
+                <a href="#"><img src="./img/book.gif" alt=""></a>
+                <br>
+                <p class="nameOfBook">
+                  <b>Название книги: </b>
+                  Старик и море
+                </p>
+                <p class="nameOfAuthor">
+                  <b>Автор: </b>
+                  Эрнест Хемингуэй
+                </p>
+                <p class="nameOfGenre">
+                  <b>Жанр: </b>
+                  повесть
+                </p>
+                <p class="nameOfLanguege">
+                  <b>Язык: </b>
+                  русский
+                </p>
+                <p class="bookFinderAnnotation">
+                  <b>Краткое описание: </b>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur assumenda, dicta cum ducimus adipisci! Quam, quis veniam nobis doloremque nihil voluptatibus repellendus et. Nostrum iusto explicabo vitae praesentium, nulla optio rerum labore inventore ut, itaque quisquam provident voluptas, aliquam qui cum facilis nam tenetur placeat rem quo debitis corrupti magni. Magnam accusantium, consequatur commodi magni harum fuga numquam nisi odio. Voluptate maxime amet reprehenderit eos, ea cupiditate dignissimos architecto eligendi quasi, adipisci excepturi, ex commodi.
+                </p>
+                <div class="date dateFinder">
+                  <b>10.10.2010</b>
+                </div>
+
+              </div>
+              <div class="bookInFinder">
+                <a href="#"><img src="./img/book.gif" alt=""></a>
+                <br>
+                <p class="nameOfBook">
+                  <b>Название книги: </b>
+                  Старик и море
+                </p>
+                <p class="nameOfAuthor">
+                  <b>Автор: </b>
+                  Эрнест Хемингуэй
+                </p>
+                <p class="nameOfGenre">
+                  <b>Жанр: </b>
+                  повесть
+                </p>
+                <p class="nameOfLanguege">
+                  <b>Язык: </b>
+                  русский
+                </p>
+                <p class="bookFinderAnnotation">
+                  <b>Краткое описание: </b>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur assumenda, dicta cum ducimus adipisci! Quam, quis veniam nobis doloremque nihil voluptatibus repellendus et. Nostrum iusto explicabo vitae praesentium, nulla optio rerum labore inventore ut, itaque quisquam provident voluptas, aliquam qui cum facilis nam tenetur placeat rem quo debitis corrupti magni. Magnam accusantium, consequatur commodi magni harum fuga numquam nisi odio. Voluptate maxime amet reprehenderit eos, ea cupiditate dignissimos architecto eligendi quasi, adipisci excepturi, ex commodi.
+                </p>
+                <div class="date dateFinder">
+                  <b>10.10.2010</b>
+                </div>
+
+              </div>
+              <div class="bookInFinder">
+                <a href="#"><img src="./img/book.gif" alt=""></a>
+                <br>
+                <p class="nameOfBook">
+                  <b>Название книги: </b>
+                  Старик и море
+                </p>
+                <p class="nameOfAuthor">
+                  <b>Автор: </b>
+                  Эрнест Хемингуэй
+                </p>
+                <p class="nameOfGenre">
+                  <b>Жанр: </b>
+                  повесть
+                </p>
+                <p class="nameOfLanguege">
+                  <b>Язык: </b>
+                  русский
+                </p>
+                <p class="bookFinderAnnotation">
+                  <b>Краткое описание: </b>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur assumenda, dicta cum ducimus adipisci! Quam, quis veniam nobis doloremque nihil voluptatibus repellendus et. Nostrum iusto explicabo vitae praesentium, nulla optio rerum labore inventore ut, itaque quisquam provident voluptas, aliquam qui cum facilis nam tenetur placeat rem quo debitis corrupti magni. Magnam accusantium, consequatur commodi magni harum fuga numquam nisi odio. Voluptate maxime amet reprehenderit eos, ea cupiditate dignissimos architecto eligendi quasi, adipisci excepturi, ex commodi.
+                </p>
+                <div class="date dateFinder">
+                  <b>10.10.2010</b>
+                </div>
+
+              </div>
+              <div class="bookInFinder">
+                <a href="#"><img src="./img/book.gif" alt=""></a>
+                <br>
+                <p class="nameOfBook">
+                  <b>Название книги: </b>
+                  Старик и море
+                </p>
+                <p class="nameOfAuthor">
+                  <b>Автор: </b>
+                  Эрнест Хемингуэй
+                </p>
+                <p class="nameOfGenre">
+                  <b>Жанр: </b>
+                  повесть
+                </p>
+                <p class="nameOfLanguege">
+                  <b>Язык: </b>
+                  русский
+                </p>
+                <p class="bookFinderAnnotation">
+                  <b>Краткое описание: </b>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur assumenda, dicta cum ducimus adipisci! Quam, quis veniam nobis doloremque nihil voluptatibus repellendus et. Nostrum iusto explicabo vitae praesentium, nulla optio rerum labore inventore ut, itaque quisquam provident voluptas, aliquam qui cum facilis nam tenetur placeat rem quo debitis corrupti magni. Magnam accusantium, consequatur commodi magni harum fuga numquam nisi odio. Voluptate maxime amet reprehenderit eos, ea cupiditate dignissimos architecto eligendi quasi, adipisci excepturi, ex commodi.
+                </p>
+                <div class="date dateFinder">
+                  <b>10.10.2010</b>
+                </div>
+
+              </div>
+              <div class="bookInFinder">
+                <a href="#"><img src="./img/book.gif" alt=""></a>
+                <br>
+                <p class="nameOfBook">
+                  <b>Название книги: </b>
+                  Старик и море
+                </p>
+                <p class="nameOfAuthor">
+                  <b>Автор: </b>
+                  Эрнест Хемингуэй
+                </p>
+                <p class="nameOfGenre">
+                  <b>Жанр: </b>
+                  повесть
+                </p>
+                <p class="nameOfLanguege">
+                  <b>Язык: </b>
+                  русский
+                </p>
+                <p class="bookFinderAnnotation">
+                  <b>Краткое описание: </b>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur assumenda, dicta cum ducimus adipisci! Quam, quis veniam nobis doloremque nihil voluptatibus repellendus et. Nostrum iusto explicabo vitae praesentium, nulla optio rerum labore inventore ut, itaque quisquam provident voluptas, aliquam qui cum facilis nam tenetur placeat rem quo debitis corrupti magni. Magnam accusantium, consequatur commodi magni harum fuga numquam nisi odio. Voluptate maxime amet reprehenderit eos, ea cupiditate dignissimos architecto eligendi quasi, adipisci excepturi, ex commodi.
+                </p>
+                <div class="date dateFinder">
+                  <b>10.10.2010</b>
+                </div>
+
+              </div>
+              <div class="bookInFinder">
+                <a href="#"><img src="./img/book.gif" alt=""></a>
+                <br>
+                <p class="nameOfBook">
+                  <b>Название книги: </b>
+                  Старик и море
+                </p>
+                <p class="nameOfAuthor">
+                  <b>Автор: </b>
+                  Эрнест Хемингуэй
+                </p>
+                <p class="nameOfGenre">
+                  <b>Жанр: </b>
+                  повесть
+                </p>
+                <p class="nameOfLanguege">
+                  <b>Язык: </b>
+                  русский
+                </p>
+                <p class="bookFinderAnnotation">
+                  <b>Краткое описание: </b>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur assumenda, dicta cum ducimus adipisci! Quam, quis veniam nobis doloremque nihil voluptatibus repellendus et. Nostrum iusto explicabo vitae praesentium, nulla optio rerum labore inventore ut, itaque quisquam provident voluptas, aliquam qui cum facilis nam tenetur placeat rem quo debitis corrupti magni. Magnam accusantium, consequatur commodi magni harum fuga numquam nisi odio. Voluptate maxime amet reprehenderit eos, ea cupiditate dignissimos architecto eligendi quasi, adipisci excepturi, ex commodi.
+                </p>
+                <div class="date dateFinder">
+                  <b>10.10.2010</b>
+                </div>
+
+              </div>
+              <div class="bookInFinder">
+                <a href="#"><img src="./img/book.gif" alt=""></a>
+                <br>
+                <p class="nameOfBook">
+                  <b>Название книги: </b>
+                  Старик и море
+                </p>
+                <p class="nameOfAuthor">
+                  <b>Автор: </b>
+                  Эрнест Хемингуэй
+                </p>
+                <p class="nameOfGenre">
+                  <b>Жанр: </b>
+                  повесть
+                </p>
+                <p class="nameOfLanguege">
+                  <b>Язык: </b>
+                  русский
+                </p>
+                <p class="bookFinderAnnotation">
+                  <b>Краткое описание: </b>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur assumenda, dicta cum ducimus adipisci! Quam, quis veniam nobis doloremque nihil voluptatibus repellendus et. Nostrum iusto explicabo vitae praesentium, nulla optio rerum labore inventore ut, itaque quisquam provident voluptas, aliquam qui cum facilis nam tenetur placeat rem quo debitis corrupti magni. Magnam accusantium, consequatur commodi magni harum fuga numquam nisi odio. Voluptate maxime amet reprehenderit eos, ea cupiditate dignissimos architecto eligendi quasi, adipisci excepturi, ex commodi.
+                </p>
+                <div class="date dateFinder">
+                  <b>10.10.2010</b>
+                </div>
+
+              </div>
+              <div class="bookInFinder">
+                <a href="#"><img src="./img/book.gif" alt=""></a>
+                <br>
+                <p class="nameOfBook">
+                  <b>Название книги: </b>
+                  Старик и море
+                </p>
+                <p class="nameOfAuthor">
+                  <b>Автор: </b>
+                  Эрнест Хемингуэй
+                </p>
+                <p class="nameOfGenre">
+                  <b>Жанр: </b>
+                  повесть
+                </p>
+                <p class="nameOfLanguege">
+                  <b>Язык: </b>
+                  русский
+                </p>
+                <p class="bookFinderAnnotation">
+                  <b>Краткое описание: </b>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur assumenda, dicta cum ducimus adipisci! Quam, quis veniam nobis doloremque nihil voluptatibus repellendus et. Nostrum iusto explicabo vitae praesentium, nulla optio rerum labore inventore ut, itaque quisquam provident voluptas, aliquam qui cum facilis nam tenetur placeat rem quo debitis corrupti magni. Magnam accusantium, consequatur commodi magni harum fuga numquam nisi odio. Voluptate maxime amet reprehenderit eos, ea cupiditate dignissimos architecto eligendi quasi, adipisci excepturi, ex commodi.
+                </p>
+                <div class="date dateFinder">
+                  <b>10.10.2010</b>
+                </div>
+
+              </div>
+              <div class="bookInFinder">
+                <a href="#"><img src="./img/book.gif" alt=""></a>
+                <br>
+                <p class="nameOfBook">
+                  <b>Название книги: </b>
+                  Старик и море
+                </p>
+                <p class="nameOfAuthor">
+                  <b>Автор: </b>
+                  Эрнест Хемингуэй
+                </p>
+                <p class="nameOfGenre">
+                  <b>Жанр: </b>
+                  повесть
+                </p>
+                <p class="nameOfLanguege">
+                  <b>Язык: </b>
+                  русский
+                </p>
+                <p class="bookFinderAnnotation">
+                  <b>Краткое описание: </b>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur assumenda, dicta cum ducimus adipisci! Quam, quis veniam nobis doloremque nihil voluptatibus repellendus et. Nostrum iusto explicabo vitae praesentium, nulla optio rerum labore inventore ut, itaque quisquam provident voluptas, aliquam qui cum facilis nam tenetur placeat rem quo debitis corrupti magni. Magnam accusantium, consequatur commodi magni harum fuga numquam nisi odio. Voluptate maxime amet reprehenderit eos, ea cupiditate dignissimos architecto eligendi quasi, adipisci excepturi, ex commodi.
+                </p>
+                <div class="date dateFinder">
+                  <b>10.10.2010</b>
+                </div>
+
+
+              </div>
+              <div class="bookInFinder">
+                <a href="#"><img src="./img/book.gif" alt=""></a>
+                <br>
+                <p class="nameOfBook">
+                  <b>Название книги: </b>
+                  Старик и море
+                </p>
+                <p class="nameOfAuthor">
+                  <b>Автор: </b>
+                  Эрнест Хемингуэй
+                </p>
+                <p class="nameOfGenre">
+                  <b>Жанр: </b>
+                  повесть
+                </p>
+                <p class="nameOfLanguege">
+                  <b>Язык: </b>
+                  русский
+                </p>
+                <p class="bookFinderAnnotation">
+                  <b>Краткое описание: </b>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur assumenda, dicta cum ducimus adipisci! Quam, quis veniam nobis doloremque nihil voluptatibus repellendus et. Nostrum iusto explicabo vitae praesentium, nulla optio rerum labore inventore ut, itaque quisquam provident voluptas, aliquam qui cum facilis nam tenetur placeat rem quo debitis corrupti magni. Magnam accusantium, consequatur commodi magni harum fuga numquam nisi odio. Voluptate maxime amet reprehenderit eos, ea cupiditate dignissimos architecto eligendi quasi, adipisci excepturi, ex commodi.
+                </p>
+                <div class="date dateFinder lastFinderDate">
+                  <b>10.10.2010</b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <nav class="navigationBottom centerAlign">
+      <ul class="pagination">
+        <li>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">...</a></li>
+        <li><a href="#">Infinity</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <a href="#~u~"><i class="fa fa-arrow-up upper" aria-hidden="true"></i></a>
+
+
+
+  <script src="./bower_components/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
+  <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>

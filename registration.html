@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Publish Yourself</title>
+  <link rel="stylesheet" href="./bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bower_components">
+  <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.css.map">
+
+
+
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/media.css">
+  <link rel="stylesheet" href="./css/registration.css">
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-3 col-md-3 col-lg-2">
+        <div class="logotype">
+          <a href="#">Publish<br>&nbspYourself</a>
+        </div>
+      </div>
+    </div>
+
+
+
+  <!-- REGISTRATION FORM -->
+  <div class="text-center" style="padding:0">
+    <div class="logo">Регистрация</div>
+    <!-- Main Form -->
+    <div class="login-form-1">
+      <form id="register-form" class="text-left">
+        <div class="login-form-main-message"></div>
+        <div class="main-login-form">
+          <div class="login-group">
+            <div class="form-group">
+              <label for="reg_username" class="sr-only">Login</label>
+              <input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="Псевдоним">
+            </div>
+            <div class="form-group">
+              <label for="reg_password" class="sr-only">Password</label>
+              <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="Пароль">
+            </div>
+            <div class="form-group">
+              <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+              <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="Подтверждение пароля">
+            </div>
+
+            <div class="form-group">
+              <label for="reg_email" class="sr-only">Email</label>
+              <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+              <label for="reg_fullname" class="sr-only">Name</label>
+                <input type="text" class="form-control" id="reg_fullname" name="reg_name" placeholder="Имя">
+            </div>
+            <div class="form-group">
+              <label for="reg_fullname" class="sr-only">Surname</label>
+                <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="Фамилия">
+            </div>
+
+            <div class="form-group login-group-checkbox">
+              <input type="radio" class="" name="reg_gender" id="male" placeholder="username">
+              <label for="male">Мужской</label>
+                <br>
+              <input type="radio" class="" name="reg_gender" id="female" placeholder="username">
+              <label for="female">Женский</label>
+            </div>
+
+            <div class="form-group login-group-checkbox">
+              <input type="checkbox" class="" id="reg_agree" name="reg_agree">
+              <label for="reg_agree">Я согласен с <a class="checkbox-confirm-license" href="#">условиями пользования</a> ресурса</label>
+            </div>
+          </div>
+          <button type="submit" class="login-button">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="etc-login-form">
+          <p>Уже зарегестрированы? <a href="#">&nbsp <span class="under-login-text">Вход</span></a></p>
+        </div>
+      </form>
+    </div>
+    <!-- end:Main Form -->
+  </div>
+</div>
+
+
+
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/registration.js"></script>
+</body>
+
+</html>

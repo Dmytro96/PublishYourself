@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>liTarget</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/liCover.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.liCover.js"></script>
+<script>
+$(function(){
+	$(window).load(function(){
+		$('.cover').liCover({
+			parent: $('.demoItem'),
+			position:'absolute',	//'absolute' or 'fixed'	
+			veticalAlign:'middle',	//'top','bottom' ar 'middle' - default
+			align:'center'			//'left','right','center'
+		})
+	})
+	
+	
+	$('.toolbar span').on('click',function(){
+		$(this).addClass('cur').siblings().removeClass('cur');
+		$('.demoItem').css({width:$(this).data('w'), height:$(this).data('h')});
+		var i = 0
+		var demoId = setInterval(function(){
+			$(window).trigger('redraw');	
+			i++;
+			if(i == 30)clearInterval(demoId)
+		},10)
+	});
+});
+</script>
+<style>
+.toolbar { padding:20px 0; text-align:center}
+.toolbar span { border-bottom:1px dashed #ccc; cursor:pointer; margin:0 20px; color:#000}
+.toolbar span.cur { color:#f00; border-bottom:1px dashed #f00}
+.demoWrap { margin:-20px 0 0 -20px; text-align:center}
+.demoItem {
+	width: 200px;
+	position: relative;
+	height: 300px;
+	margin: 20px 0 0 20px;
+	vertical-align:top;
+	display:inline-block;
+	
+	
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+</style>
+</head>
+<body>
+
+<div class="conteiner">
+<h3>liCover - jQuery Responsive Cover Image или адаптивные изображения на jQuery</h3>
+<div class="navPr">
+	<a href="index.html">Описание</a>
+    <span>Галерея с нестандартными пропорциями</span>
+</div>
+
+<fieldset>
+    <legend>Результат</legend>	
+	<div class="toolbar">
+		<span data-w="200px" data-h="300px" class="cur">200×300</span>
+		<span data-w="300px" data-h="300px">300×300</span>
+		<span data-w="300px" data-h="200px">300×200</span>
+		<span data-w="300px" data-h="100px">300×100</span>
+	</div>	
+	
+	
+	<div class="demoWrap">
+		<div style="width:100px; height:100px;" class="demoItem">
+			<img class="cover" src="pic/img2.jpg">
+		</div>
+		<div style="width:500px; height:500px;" class="demoItem">
+			<img class="cover" src="pic/img3.jpg">
+		</div>
+		<div style="width:300px; height:100px;" class="demoItem">
+			<img class="cover" src="pic/img4.jpg">
+		</div>
+	</div>
+	
+</fieldset> 
+
+<fieldset>
+    <legend>Подключаемые файлы</legend>		
+    <pre><xmp>
+<link rel="stylesheet" href="css/liCover.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.liCover.js"></script>
+    </xmp></pre>
+</fieldset> 
+
+<fieldset>
+    <legend>Инициализация плагина</legend>		
+    <pre><xmp>
+<script>
+$(function(){
+	$(window).load(function(){
+		$('.cover').liCover({
+			parent: $('.demoItem'),
+			position:'absolute' //'absolute' or 'fixed'	
+		})
+	})
+})
+</script> 
+    </xmp></pre>
+</fieldset>
+
+<fieldset>
+    <legend>Код HTML</legend>		
+    <pre><xmp>
+
+<div class="demoItem">
+	<img class="cover" src="pic/img2.jpg">
+</div>
+<div class="demoItem">
+	<img class="cover" src="pic/img3.jpg">
+</div>
+<div class="demoItem">
+	<img class="cover" src="pic/img4.jpg">
+</div>
+
+    </xmp></pre>
+</fieldset>
+
+</div>   
+
+<div class="autor">
+    <a class="logoMasscode" target="_blank" href="http://masscode.ru">
+    	<span class="logoMass">MASS</span>CODE<span class="logoMass">.RU</span>
+    </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Publish Yourself</title>
+  <link rel="stylesheet" href="./bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./bower_components/owl.carousel.2.0.0-beta.2.4/assets/owl.carousel.css">
+  <link rel="stylesheet" href="./bower_components/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+  <link rel="stylesheet" href="./bower_components/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+  <link rel="stylesheet" href="./bower_components/jquery-ui-multiselect-widget-master/jquery.multiselect.css">
+
+
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./bower_components/jquery-ui-1.11.4.custom/jquery-ui.min.js" charset="utf-8"></script>
+  <script src="./bower_components/jquery-ui-multiselect-widget-master/src/jquery.multiselect.js"></script>
+
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/media.css">
+
+
+
+
+</head>
+
+<body>
+
+  <div id="login-modal" class="modal fade">
+    <div class="text-center" style="padding:50px 0">
+      <div class="logo white1">Вход</div>
+
+      <!-- Main Form -->
+      <div class="login-form-1">
+        <form id="login-form" class="text-left">
+          <div class="login-form-main-message"></div>
+
+          <div class="main-login-form">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="login-group">
+
+              <div class="form-group">
+                <label for="lg_username" class="sr-only">Login</label>
+                <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="Псевдоним">
+              </div>
+              <div class="form-group">
+                <label for="lg_password" class="sr-only">Password</label>
+                <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="Пароль">
+              </div>
+              <div class="form-group login-group-checkbox">
+                <input type="checkbox" id="lg_remember" name="lg_remember">
+                <label for="lg_remember">Запомнить</label>
+              </div>
+            </div>
+            <button type="submit" class="login-button">
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="etc-login-form white1">
+            <p>Забыли пароль? <a href="#"><b>Восстановление</b></a></p>
+            <p>Нет аккаунта? <a href="#"><b>&nbspРегистрация</b></a></p>
+          </div>
+        </form>
+      </div>
+      <!-- end:Main Form -->
+    </div>
+  </div>
+
+
+  <div id="container-header" class="container">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <ul class="top-hyper">
+
+
+
+          <li>
+            <div class="dropdown"> RU <i class="fa fa-caret-down" aria-hidden="true"></i>
+              <div class="dropdown-content">
+                <ul>
+                  <li><a href="#">UA</a></li>
+                  <li><a href="#">RU</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+
+
+
+          <li>
+            <a href="#">
+              <i class="fa fa-vk"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <ul class="sign-list">
+          <li>
+            <a href="#">Зарегестрироваться</a>
+          </li>
+          <li>
+            <a href="#login-modal" class="none-outline" data-toggle="modal">Войти</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-10 col-sm-3 col-md-3 col-lg-2">
+        <div class="logotype">
+          <a href="#">Publish<br>&nbspYourself</a>
+        </div>
+      </div>
+      <div class="col-xs-2 col-sm-9 col-md-9 col-lg-10">
+        <ul class="nav">
+          <li>
+            <div class="finder leftFinderMargin">
+              <input class="finderField"  type="text" placeholder="Поиск">
+              <span class="finderButton">
+                <i class='fa fa-search' aria-hidden='true'></i>
+              </span>
+            </div>
+          </li>
+          <li><a href="#">Личный<br> кабинет</a></li>
+          <li><a href="#">Форум</a></li>
+          <li><a href="#">Все книги</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="col-md-push-1 col-md-10">
+      <div class="bookAddeder">
+        <h1>Добавление книги</h1>
+        <form class="form-horizontal" action="">
+          <div class="row ">
+            <div class="col-md-4">
+              <img id="#addImage" alt="#" src="./img/defaultImage.png" />
+              <input class="addImage" accept="image/*" type="file">
+            </div>
+            <div class="col-md-8">
+              <div class="row firstMargin">
+                <div class="col-sm-3">
+                   <label class="control-label nameDescription">Название книги</label>
+                </div>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+                <br>
+              <div class="row">
+                <div class="col-sm-3">
+                   <label class="control-label nameDescription"> Автор</label>
+                </div>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+                <br>
+              <div class="row">
+                <div class="col-sm-3">
+                   <label class="control-label nameDescription"> Жанр </label>
+                </div>
+                <div class="col-sm-9">
+                  <p>
+                    <select id="selectDescriptionGenre" multiple="multiple" name="selectNameFinderGenreDescription" size="5" >
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                      <option value="option4">Option 4</option>
+                      <option value="option5">Option 5</option>
+                      <option value="option6">Option 6</option>
+                      <option value="option7">Option 7</option>
+                    </select>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row selectDescriptionLanguege">
+                <div class="col-sm-3">
+                   <label class="control-label nameDescription"> Язык </label>
+                </div>
+                <div class="col-sm-9">
+                  <p>
+                    <select id="selectDescriptionLanguege" multiple="multiple" name="selectNameLanguegeDescription" size="5" >
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                      <option value="option4">Option 4</option>
+                      <option value="option5">Option 5</option>
+                      <option value="option6">Option 6</option>
+                      <option value="option7">Option 7</option>
+                    </select>
+                  </p>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm-3">
+                   <label class="control-label nameDescription"> Краткое описание</label>
+                </div>
+                <div class="col-sm-9">
+                  <textarea id="annotationDescription" rows="15"  ></textarea>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="buttonAddBook "> Добавить книгу</button>
+
+          </div>
+
+
+        </form>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./bower_components/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
+  <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>

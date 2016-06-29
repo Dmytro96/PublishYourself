@@ -1,0 +1,27 @@
+{
+  "name": "PublishYourself",
+  "authors": [
+    "Dmytro Kazaev <dmytrokazaev@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6",
+    "normalize-css": "normalize.css#^3.0.3",
+    "prefixfree": "*",
+    "owl.carousel": "owl-carousel2#^2.0.0-beta.3",
+    "font-awesome": "^4.5.0",
+    "jquery-ui": "jquery.ui#^1.11.4"
+  }
+}

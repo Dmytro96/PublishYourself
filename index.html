@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Publish Yourself</title>
+  <link rel="stylesheet" href="./bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./bower_components/owl.carousel.2.0.0-beta.2.4/assets/owl.carousel.css">
+  <link rel="stylesheet" href="./bower_components/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+
+
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./bower_components/jquery-ui-1.11.4.custom/jquery-ui.min.js" charset="utf-8"></script>
+  <script src="./bower_components/jquery-ui-multiselect-widget-master/src/jquery.multiselect.js" charset="utf-8"></script>
+
+
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/registration.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/media.css">
+
+
+
+
+</head>
+
+<body>
+
+  <div id="login-modal" class="modal fade">
+    <div class="text-center" style="padding:50px 0">
+      <div class="logo white1">Вход</div>
+
+      <!-- Main Form -->
+      <div class="login-form-1">
+        <form id="login-form" class="text-left">
+          <div class="login-form-main-message"></div>
+
+          <div class="main-login-form">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="login-group">
+
+              <div class="form-group">
+                <label for="lg_username" class="sr-only">Login</label>
+                <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="Псевдоним">
+              </div>
+              <div class="form-group">
+                <label for="lg_password" class="sr-only">Password</label>
+                <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="Пароль">
+              </div>
+              <div class="form-group login-group-checkbox">
+                <input type="checkbox" id="lg_remember" name="lg_remember">
+                <label for="lg_remember">Запомнить</label>
+              </div>
+            </div>
+            <button type="submit" class="login-button">
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="etc-login-form white1">
+            <p>Забыли пароль? <a href="#"><b>Восстановление</b></a></p>
+            <p>Нет аккаунта? <a href="#"><b>&nbspРегистрация</b></a></p>
+          </div>
+        </form>
+      </div>
+      <!-- end:Main Form -->
+    </div>
+  </div>
+
+
+  <div id="container-header" class="container">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <ul class="top-hyper">
+
+
+
+          <li>
+            <div class="dropdown"> RU <i class="fa fa-caret-down" aria-hidden="true"></i>
+              <div class="dropdown-content">
+                <ul>
+                  <li><a href="#">UA</a></li>
+                  <li><a href="#">RU</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+
+
+
+          <li>
+            <a href="#">
+              <i class="fa fa-vk"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <ul class="sign-list">
+          <li>
+            <a href="#">Зарегестрироваться</a>
+          </li>
+          <li>
+            <a href="#login-modal" class="none-outline" data-toggle="modal">Войти</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-10 col-sm-3 col-md-3 col-lg-2">
+        <div class="logotype">
+          <a href="#">Publish<br>&nbspYourself</a>
+        </div>
+      </div>
+      <div class="col-xs-2 col-sm-9 col-md-9 col-lg-10">
+        <ul class="nav">
+          <li>
+            <div class="finder leftFinderMargin">
+              <input class="finderField"  type="text" placeholder="Поиск">
+              <span class="finderButton">
+                <i class='fa fa-search' aria-hidden='true'></i>
+              </span>
+            </div>
+          </li>
+          <li><a href="#">Личный<br> кабинет</a></li>
+          <li><a href="#">Форум</a></li>
+          <li><a href="#">Все книги</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="slider">
+  <div id="owl" class="owl-carousel">
+    <div class="slide slide1">
+      <div class="head-text1">
+        Есть что показать людям?
+      </div>
+      <div class="owl-button">
+        <a href="#">
+          Добавить книгу
+        </a>
+      </div>
+    </div>
+    <div class="slide slide2">
+      <div class="head-text2">
+        Интерес к современной литературе?
+      </div>
+      <div class="owl-button">
+        <a href="#">
+          Поиск книг
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-push-2 col-md-8">
+      <div id="tabGeneralPage">
+        <h3>Популярное</h3>
+        <ul>
+          <li><a href="#tabGeneral-1">Сейчас</a></li>
+          <li><a href="#tabGeneral-2">Месяц</a></li>
+          <li><a href="#tabGeneral-3">Год</a></li>
+        </ul>
+        <div class="tabGeneralSizer" id="tabGeneral-1">
+          <div class="row">
+            <div class="tabsOlwCarousel1">
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tabGeneral-2" class="tabGeneralSizer">
+          <div class="row">
+            <div class="tabsOlwCarousel1">
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tabGeneral-3" class="tabGeneralSizer">
+          <div class="row">
+            <div class="tabsOlwCarousel1">
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+              <div class="col-md-12">
+                <a href="#">
+                  <img src="./img/bookTab.jpg" alt="">
+                  <p class="nameOfBook">
+                    Старик и море
+                  </p>
+                  <p class="nameOfAuthor">
+                    Э. Хемингуэй
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="news-head">
+          Новости
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1 ">
+          <div class="news-text">
+            <a href="#">
+              <img src="./img/book.gif" alt="">
+            </a>
+            <div class="row">
+              <div class="in-news">
+                <div class="head-of-news">
+                  <a href="#">
+                    <b>Lorem ipsum dolor sit amet.</b>
+                  </a>
+                </div>
+                <div class="text-of-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam vel atque, illo a, quaerat laborum asperiores! Unde, fuga, alias sunt ipsum est inventore laudantium molestias rem enim dolor sequi neque iure voluptatum maiores veritatis, cumque omnis doloribus, impedit sed dicta animi. Consequatur molestiae esse similique quisquam repellendus nesciunt, quam porro!
+                  <div class="date">
+                    <b>10.10.2010</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-push-1 col-lg-10">
+          <div class="news-bottom"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1 ">
+          <div class="news-text">
+            <a href="#">
+              <img src="./img/book.gif" alt="">
+            </a>
+            <div class="row">
+              <div class="in-news">
+                <div class="head-of-news">
+                  <a href="#">
+                    <b>Lorem ipsum dolor sit amet.</b>
+                  </a>
+                </div>
+                <div class="text-of-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam vel atque, illo a, quaerat laborum asperiores! Unde, fuga, alias sunt ipsum est inventore laudantium molestias rem enim dolor sequi neque iure voluptatum maiores veritatis, cumque omnis doloribus, impedit sed dicta animi. Consequatur molestiae esse similique quisquam repellendus nesciunt, quam porro!
+                  <div class="date">
+                    <b>10.10.2010</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-push-1 col-lg-10">
+          <div class="news-bottom"></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navigationBottom centerAlign">
+      <ul class="pagination">
+        <li>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">...</a></li>
+        <li><a href="#">Infinity</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="./bower_components/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
+  <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>
